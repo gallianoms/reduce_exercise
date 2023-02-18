@@ -9,4 +9,11 @@ var max = function () {
     }
     return numbers.reduce(function (acc, num) { return Math.max(acc, num); });
 };
-console.log(max(1, 2, 3, 4, 5)); // 5
+// console.log(max(1, 2, 3, 4, 5)) // 5
+//* Exercise 2
+//* Convert array to flat array
+var arr = [1, [2], [3, 4, 5]];
+var flatArr = function (arr) {
+    return arr.reduce(function (acc, item) { return acc.concat(item); }, []);
+};
+console.log(flatArr(arr)); // [1, 2, 3, 4, 5]
