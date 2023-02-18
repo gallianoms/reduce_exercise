@@ -146,7 +146,7 @@ const voterResults = (arrVoters: Vote[]) => {
   }, {})
 }
 
-console.log(voterResults(arrVoters))
+// console.log(voterResults(arrVoters))
 // {
 //  numYoungVotes: 1
 //  numYoungPeople: 4
@@ -154,4 +154,38 @@ console.log(voterResults(arrVoters))
 //  numMidsPeople: 4
 //  numOldVotesPeople: 3
 //  numOldsPeople: 4
+// }
+
+//* Exercise 7
+//* Convert arrays to objects
+
+const people: People[] = [
+  { name: 'Cristina', age: 25, sex: 'W' },
+  { name: 'Ana', age: 20, sex: 'W' },
+  { name: 'Fernando', age: 15, sex: 'M' },
+  { name: 'Alejandra', age: 11, sex: 'W' },
+]
+
+interface People {
+  name: string
+  age: number
+  sex: string
+}
+
+const toObj = (people: People[]) => {
+  return people.reduce((acc, pe) => {
+    acc[pe.name] = {
+      age: pe.age,
+      sex: pe.sex,
+    }
+    return acc
+  }, {})
+}
+
+console.log(toObj(people))
+// {
+//   Cristina: {age: 25, sex: 'W'},
+//   Ana: {age: 20, sex: 'W'},
+//   Fernando: {age: 15, sex: 'M'},
+//   Alejandra: {age: 11, sex: 'W'},
 // }
