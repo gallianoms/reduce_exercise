@@ -16,4 +16,12 @@ const flatArr = arr => {
   return arr.reduce((acc, item) => acc.concat(item), [])
 }
 
-console.log(flatArr(arr)) // [1, 2, 3, 4, 5]
+// console.log(flatArr(arr)) // [1, 2, 3, 4, 5]
+
+//* Exercise 3
+//* Turn an array of numbers into a long string of all those numbers.
+const strConcat = (...numbers: number[]): string => {
+  return numbers.reduce((acc, num) => acc.concat(num.toString()), '')
+}
+
+console.log(strConcat(1, 2, 3, 4, 5)) // "12345"
