@@ -189,3 +189,44 @@ console.log(toObj(people))
 //   Fernando: {age: 15, sex: 'M'},
 //   Alejandra: {age: 11, sex: 'W'},
 // }
+
+//* Exercise 8
+//* Write a function that logs the 5 cities that occur the most in the array below in order from the most number of occurrences to least
+
+const citiesList: string[] = [
+  'nashville',
+  'nashville',
+  'los angeles',
+  'nashville',
+  'memphis',
+  'barcelona',
+  'los angeles',
+  'sevilla',
+  'madrid',
+  'canary islands',
+  'barcelona',
+  'madrid',
+  'nashville',
+  'barcelona',
+  'london',
+  'berlin',
+  'madrid',
+  'nashville',
+  'london',
+  'madrid',
+]
+
+const logCities = (list: string[], num: number = 5) => {
+  const cities = list.reduce((acc, city) => {
+    acc[city] = (acc[city] ?? 0) + 1
+    return acc
+  }, {})
+
+  return Object.entries(cities)
+    .sort((a: unknown, b: unknown) => b[1] - a[1])
+    .slice(0, 5)
+    .map(city => city[0])
+}
+
+console.log(logCities(citiesList))
+//* [ 'nashville', 'madrid', 'barcelona', 'los angeles', 'london' ]
