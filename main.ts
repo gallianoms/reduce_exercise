@@ -55,4 +55,24 @@ const totalVotes = (voters: Vote[]) => {
     .reduce((acc, voter) => (acc += 1), 0)
 }
 
-console.log(totalVotes(voters)) // 7
+// console.log(totalVotes(voters)) // 7
+
+//* Exercise 5
+//* Given an array of all your wishlist items, figure out how much it would cost to just buy everything at once
+const wishlist: Wishlist[] = [
+  { title: 'title1', price: 1 },
+  { title: 'title2', price: 2 },
+  { title: 'title3', price: 3 },
+  { title: 'title4', price: 4 },
+]
+
+interface Wishlist {
+  title: string
+  price: number
+}
+
+const shoppingSpree = (wishlist: Wishlist[]) => {
+  return wishlist.reduce((acc, item) => acc + item.price, 0)
+}
+
+console.log(shoppingSpree(wishlist)) // 10

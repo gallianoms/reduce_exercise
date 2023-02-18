@@ -48,4 +48,16 @@ var totalVotes = function (voters) {
         .filter(function (voter) { return voter.voted === true; })
         .reduce(function (acc, voter) { return (acc += 1); }, 0);
 };
-console.log(totalVotes(voters)); // 7
+// console.log(totalVotes(voters)) // 7
+//* Exercise 5
+//* Given an array of all your wishlist items, figure out how much it would cost to just buy everything at once
+var wishlist = [
+    { title: 'title1', price: 1 },
+    { title: 'title2', price: 2 },
+    { title: 'title3', price: 3 },
+    { title: 'title4', price: 4 },
+];
+var shoppingSpree = function (wishlist) {
+    return wishlist.reduce(function (acc, item) { return acc + item.price; }, 0);
+};
+console.log(shoppingSpree(wishlist)); // 10
