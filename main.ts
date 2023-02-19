@@ -377,7 +377,7 @@ const watchList: Movie[] = [
   },
 ]
 
-const getRating = (watchList: Movie[]) => {
+const getRating = (watchList: Movie[]): number => {
   return watchList
     .filter(movie => movie.Director === 'Christopher Nolan')
     .reduce((acc, movie, idx, array) => {
@@ -385,4 +385,18 @@ const getRating = (watchList: Movie[]) => {
     }, 0)
 }
 
-console.log(getRating(watchList)) //8.675
+// console.log(getRating(watchList)) //8.675
+
+//* Exercise 10
+//* Completa el código para la función squareList usando cualquier combinación de map(), filter(), y reduce(). La función debe devolver un nuevo arreglo que contenga los cuadrados de solamente los enteros positivos (números decimales no son enteros) cuando se le pasa un arreglo de números reales. Un ejemplo de un arreglo que contiene números reales es [-3, 4.8, 5, 3, -3.2].
+//* Nota: Tu función no debe usar ningún tipo de bucle for o while o la función forEach().
+
+const list: number[] = [-3, 4.8, 5, 3, -3.2]
+
+const squareList = (list: number[]) => {
+  return list
+    .filter(num => Number.isInteger(num) && num > 0)
+    .map(num => num * num)
+}
+
+console.log(squareList(list))
