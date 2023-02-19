@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 //* Exercise 1
 //* Return max of two numbers
 var max = function () {
@@ -110,7 +110,7 @@ var voterResults = function (arrVoters) {
             numMidVotesPeople: numMidVotesPeople,
             numMidsPeople: numMidsPeople,
             numOldVotesPeople: numOldVotesPeople,
-            numOldsPeople: numOldsPeople
+            numOldsPeople: numOldsPeople,
         });
     }, {});
 };
@@ -135,7 +135,7 @@ var toObj = function (people) {
     return people.reduce(function (acc, pe) {
         acc[pe.name] = {
             age: pe.age,
-            sex: pe.sex
+            sex: pe.sex,
         };
         return acc;
     }, {});
@@ -204,7 +204,7 @@ var watchList = [
         imdbVotes: '1,446,708',
         imdbID: 'tt1375666',
         Type: 'movie',
-        Response: 'True'
+        Response: 'True',
     },
     {
         Title: 'Interstellar',
@@ -226,7 +226,7 @@ var watchList = [
         imdbVotes: '910,366',
         imdbID: 'tt0816692',
         Type: 'movie',
-        Response: 'True'
+        Response: 'True',
     },
     {
         Title: 'The Dark Knight',
@@ -248,7 +248,7 @@ var watchList = [
         imdbVotes: '1,652,832',
         imdbID: 'tt0468569',
         Type: 'movie',
-        Response: 'True'
+        Response: 'True',
     },
     {
         Title: 'Batman Begins',
@@ -270,7 +270,7 @@ var watchList = [
         imdbVotes: '972,584',
         imdbID: 'tt0372784',
         Type: 'movie',
-        Response: 'True'
+        Response: 'True',
     },
     {
         Title: 'Avatar',
@@ -292,7 +292,7 @@ var watchList = [
         imdbVotes: '876,575',
         imdbID: 'tt0499549',
         Type: 'movie',
-        Response: 'True'
+        Response: 'True',
     },
 ];
 var getRating = function (watchList) {
@@ -303,3 +303,4 @@ var getRating = function (watchList) {
     }, 0);
 };
 console.log(getRating(watchList)); //8.675
+//# sourceMappingURL=main.js.map
